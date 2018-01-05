@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Be Here Now" type="application/atom+xml" />
 
@@ -87,11 +85,11 @@
 <meta name="keywords" content="Linux,shell,bash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux基础(一)基础">
-<meta property="og:url" content="http://yoursite.com/2018/09/04/Linux基础(一)基础/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/Linux基础(一)基础/index.html">
 <meta property="og:site_name" content="Be Here Now">
 <meta property="og:description" content="shell 命令解析器：接收用户命令，调用相应的应用程序。  &amp;emsp;&amp;emsp;在计算机科学中，shell俗称‘壳’，区别于Kemel(核)。shell分为图形界面shell和命令行shell。各个shell功能差不多，Linux下默认使用bash。 bash bash 是一个为GNU计划编写的Unix shell。  bash命令格式命令 [-options] [参数], --help 查">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T08:11:36.043Z">
+<meta property="og:updated_time" content="2018-01-05T09:43:49.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基础(一)基础">
 <meta name="twitter:description" content="shell 命令解析器：接收用户命令，调用相应的应用程序。  &amp;emsp;&amp;emsp;在计算机科学中，shell俗称‘壳’，区别于Kemel(核)。shell分为图形界面shell和命令行shell。各个shell功能差不多，Linux下默认使用bash。 bash bash 是一个为GNU计划编写的Unix shell。  bash命令格式命令 [-options] [参数], --help 查">
@@ -124,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/04/Linux基础(一)基础/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/04/Linux基础(一)基础/"/>
 
 
 
@@ -257,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/04/Linux基础(一)基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/04/Linux基础(一)基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zly">
@@ -286,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T15:40:45+08:00">
-                2018-09-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-04T15:40:45+08:00">
+                2017-09-04
               </time>
             
 
@@ -346,16 +344,16 @@
       
 
       
-        <h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><blockquote>
+        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><blockquote>
 <p>命令解析器：接收用户命令，调用相应的应用程序。</p>
 </blockquote>
 <p>&emsp;&emsp;在计算机科学中，shell俗称<strong>‘壳’</strong>，区别于Kemel(核)。shell分为<strong>图形界面shell</strong>和<strong>命令行shell</strong>。各个shell功能差不多，Linux下默认使用bash。</p>
-<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><blockquote>
+<h1 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h1><blockquote>
 <p>bash 是一个为GNU计划编写的Unix shell。</p>
 </blockquote>
-<h3 id="bash命令格式"><a href="#bash命令格式" class="headerlink" title="bash命令格式"></a>bash命令格式</h3><p><code>命令 [-options] [参数], --help 查看帮助</code></p>
-<h3 id="bash常见命令"><a href="#bash常见命令" class="headerlink" title="bash常见命令"></a>bash常见命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span>:        查看当前目录</span><br><span class="line"><span class="built_in">cd</span>:         切换目录（./为当前目录，../为上级目录，/为根目录）</span><br><span class="line">ls：        查看目录下内容(ls -a 查看隐藏文件，ls -l查看文件详细信息)</span><br><span class="line">mkdir:      创建文件夹</span><br><span class="line">rmdir:      删除文件夹</span><br><span class="line">touch:      创建文件</span><br><span class="line">rm:         删除文件</span><br><span class="line">cat,more,less 都可查看文件内容</span><br><span class="line">mv(move):   移动文件或重命名（例 mv index.html ./demo/index.html xxx.html把index.html移动到demo目录下并重命名为xxx.html）</span><br><span class="line">cp(copy):   复制文件也可重命名</span><br><span class="line">head:       查看文件前几行（head -5 index.html）</span><br><span class="line">tail:       查看文件后几行</span><br><span class="line"><span class="built_in">history</span>:    查看操作历史</span><br><span class="line">wget:       下载 （例 wget 地址）</span><br><span class="line">tar:        解压缩（例 tar 地址）</span><br><span class="line">curl:       网络请求（例 curl 地址）</span><br><span class="line">whoami:     查看当前用户</span><br><span class="line">\&gt;和\&gt;&gt;重定向: \&gt;覆盖，\&gt;&gt;追加</span><br><span class="line">\|管道符，可以将多个命令连接使用，上一个命令的执行结果作为下一个命令的参数。</span><br><span class="line">grep:       匹配内容，可结合管道符使用</span><br><span class="line"></span><br><span class="line">tab键自动补全，多项时两下显示全部匹配项</span><br><span class="line">SSH远程登录协议，ssh 账户@地址，例 ssh root@192.168.0.1, ssh root@github.zlyll.com</span><br></pre></td></tr></table></figure>
-<h2 id="vi-vim编辑器"><a href="#vi-vim编辑器" class="headerlink" title="vi/vim编辑器"></a>vi/vim编辑器</h2>
+<h2 id="bash命令格式"><a href="#bash命令格式" class="headerlink" title="bash命令格式"></a>bash命令格式</h2><p><code>命令 [-options] [参数], --help 查看帮助</code></p>
+<h2 id="bash常见命令"><a href="#bash常见命令" class="headerlink" title="bash常见命令"></a>bash常见命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span>:        查看当前目录</span><br><span class="line"><span class="built_in">cd</span>:         切换目录（./为当前目录，../为上级目录，/为根目录）</span><br><span class="line">ls：        查看目录下内容(ls -a 查看隐藏文件，ls -l查看文件详细信息)</span><br><span class="line">mkdir:      创建文件夹</span><br><span class="line">rmdir:      删除文件夹</span><br><span class="line">touch:      创建文件</span><br><span class="line">rm:         删除文件</span><br><span class="line">cat,more,less 都可查看文件内容</span><br><span class="line">mv(move):   移动文件或重命名（例 mv index.html ./demo/index.html xxx.html把index.html移动到demo目录下并重命名为xxx.html）</span><br><span class="line">cp(copy):   复制文件也可重命名</span><br><span class="line">head:       查看文件前几行（head -5 index.html）</span><br><span class="line">tail:       查看文件后几行</span><br><span class="line"><span class="built_in">history</span>:    查看操作历史</span><br><span class="line">wget:       下载 （例 wget 地址）</span><br><span class="line">tar:        解压缩（例 tar 地址）</span><br><span class="line">curl:       网络请求（例 curl 地址）</span><br><span class="line">whoami:     查看当前用户</span><br><span class="line">\&gt;和\&gt;&gt;重定向: \&gt;覆盖，\&gt;&gt;追加</span><br><span class="line">\|管道符，可以将多个命令连接使用，上一个命令的执行结果作为下一个命令的参数。</span><br><span class="line">grep:       匹配内容，可结合管道符使用</span><br><span class="line"></span><br><span class="line">tab键自动补全，多项时两下显示全部匹配项</span><br><span class="line">SSH远程登录协议，ssh 账户@地址，例 ssh root@192.168.0.1, ssh root@github.zlyll.com</span><br></pre></td></tr></table></figure>
+<h1 id="vi-vim编辑器"><a href="#vi-vim编辑器" class="headerlink" title="vi/vim编辑器"></a>vi/vim编辑器</h1>
       
     </div>
     
@@ -389,15 +387,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/03/article-title/" rel="next" title="article title">
-                <i class="fa fa-chevron-left"></i> article title
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/05/Linux基础(一)Git/" rel="prev" title="Linux基础(一)Git">
+                Linux基础(一)Git <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -536,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell"><span class="nav-number">1.</span> <span class="nav-text">shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash"><span class="nav-number">2.</span> <span class="nav-text">bash</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bash命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">bash命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bash常见命令"><span class="nav-number">2.2.</span> <span class="nav-text">bash常见命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi-vim编辑器"><span class="nav-number">3.</span> <span class="nav-text">vi/vim编辑器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell"><span class="nav-number">1.</span> <span class="nav-text">shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bash"><span class="nav-number">2.</span> <span class="nav-text">bash</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bash命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">bash命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash常见命令"><span class="nav-number">2.2.</span> <span class="nav-text">bash常见命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vi-vim编辑器"><span class="nav-number">3.</span> <span class="nav-text">vi/vim编辑器</span></a></li></ol></div>
             
 
           </div>
