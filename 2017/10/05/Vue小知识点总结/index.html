@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="Be Here Now">
 <meta property="og:description" content="封装复用的js公用方法1234新建js模板 例 export function XXX方法名(参数)&amp;#123; &amp;#125; #可多个在模块里 import &amp;#123;XXX&amp;#125; form 路径# 在模块里 import &amp;#123;XXX ，YYY&amp;#125; form 路径 多个方法引入 Vue生命周期 所有的生命周期钩子自动绑定 this 到上下文实例中，可以访问当前数据，对属性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-09T08:15:24.267Z">
+<meta property="og:updated_time" content="2018-02-09T08:26:35.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue小知识点总结">
 <meta name="twitter:description" content="封装复用的js公用方法1234新建js模板 例 export function XXX方法名(参数)&amp;#123; &amp;#125; #可多个在模块里 import &amp;#123;XXX&amp;#125; form 路径# 在模块里 import &amp;#123;XXX ，YYY&amp;#125; form 路径 多个方法引入 Vue生命周期 所有的生命周期钩子自动绑定 this 到上下文实例中，可以访问当前数据，对属性">
@@ -325,6 +325,7 @@
 <h2 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h2><blockquote>
 <p>所有的生命周期钩子自动绑定 this 到上下文实例中，可以访问当前数据，对属性和方法进行运算。<br>不能使用箭头函数来定义一个生命周期方法，因为箭头函数绑定了父上下文。</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beforecreate : 举个栗子：可以在这加个loading事件 </span><br><span class="line">created ：在这结束loading，还做一些初始化，实现函数自执行 </span><br><span class="line">mounted ： 在这发起后端请求，拿回数据，配合路由钩子做一些事情</span><br><span class="line">beforeDestory： 你确认删除XX吗？ destoryed ：当前组件已被删除，清空相关内容</span><br></pre></td></tr></table></figure>
 <h2 id="组件传值"><a href="#组件传值" class="headerlink" title="组件传值"></a>组件传值</h2><blockquote>
 <p>vue的组件作用域都是孤立的，不允许在子组件的模板内直接引用父组件的数据。必须使用特定的方法才能实现组件之间的数据传递。  </p>
 </blockquote>
