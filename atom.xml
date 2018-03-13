@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-09T07:27:50.227Z</updated>
+  <updated>2018-03-13T08:13:55.755Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS--内存空间</title>
+    <link href="http://yoursite.com/2017/10/08/JS--%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4/"/>
+    <id>http://yoursite.com/2017/10/08/JS--内存空间/</id>
+    <published>2017-10-08T10:01:51.000Z</published>
+    <updated>2018-03-13T08:13:55.755Z</updated>
+    
+    <content type="html"><![CDATA[<p>这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。</p><p>因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回事儿？比如浅复制与深复制有什么不同？还有闭包，原型等等。</p><p>所以，想要对JS的理解更加深刻，就必须对内存空间有一个清晰的认知。</p><p>先来看一个简单的例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123; name: <span class="string">'ll'</span> , age : 18 &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> b(c)&#123;</span><br><span class="line">    c = null</span><br><span class="line">&#125;</span><br><span class="line">b(a);</span><br><span class="line"></span><br><span class="line">console.log(a)</span><br></pre></td></tr></table></figure></p><p>以上例子需要理解JS的基本数据类型、引用数据类型，以及引用传递，这就需要对JS的内存了解的很透彻才行。</p><h1 id="一、栈与堆"><a href="#一、栈与堆" class="headerlink" title="一、栈与堆"></a>一、栈与堆</h1><blockquote><p>其实Javascript没有严格意义上区分栈内存和堆内存。<br>但是在某些场景，我们仍然需要基于堆栈数据结构的思路进行处理，比如JavaScript的执行上下文（执行环境）。执行上下文在逻辑上实现了堆栈。因此理解堆栈数据结构的原理与特点任然十分重要。</p></blockquote><h1 id="二、数据类型"><a href="#二、数据类型" class="headerlink" title="二、数据类型"></a>二、数据类型</h1><pre><code>var a = 20;var b = &apos;aaa&apos;;var c = true;var d = { m: 111 }</code></pre><p>在JS中</p><h2 id="变量对象与基础数据类型"><a href="#变量对象与基础数据类型" class="headerlink" title="变量对象与基础数据类型"></a>变量对象与基础数据类型</h2><h2 id="引用数据类型与堆内存"><a href="#引用数据类型与堆内存" class="headerlink" title="引用数据类型与堆内存"></a>引用数据类型与堆内存</h2><h1 id="三、内存空间管理以及内存泄漏"><a href="#三、内存空间管理以及内存泄漏" class="headerlink" title="三、内存空间管理以及内存泄漏"></a>三、内存空间管理以及内存泄漏</h1><p><img src="/_img/ram.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。&lt;/p&gt;
+&lt;p&gt;因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回
+      
+    
+    </summary>
+    
+    
+      <category term="JS 内存 引用传值" scheme="http://yoursite.com/tags/JS-%E5%86%85%E5%AD%98-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS--内存空间</title>
+    <link href="http://yoursite.com/2017/10/08/JS--ES6promise%E3%80%81proxy/"/>
+    <id>http://yoursite.com/2017/10/08/JS--ES6promise、proxy/</id>
+    <published>2017-10-08T10:01:51.000Z</published>
+    <updated>2018-03-12T01:15:55.149Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="JS 内存 引用传值" scheme="http://yoursite.com/tags/JS-%E5%86%85%E5%AD%98-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS--内存空间</title>
+    <link href="http://yoursite.com/2017/10/08/JS--%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    <id>http://yoursite.com/2017/10/08/JS--浅拷贝和深拷贝/</id>
+    <published>2017-10-08T10:01:51.000Z</published>
+    <updated>2018-03-12T01:15:55.149Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="JS 内存 引用传值" scheme="http://yoursite.com/tags/JS-%E5%86%85%E5%AD%98-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS--内存空间</title>
+    <link href="http://yoursite.com/2017/10/08/JS--%E9%97%AD%E5%8C%85/"/>
+    <id>http://yoursite.com/2017/10/08/JS--闭包/</id>
+    <published>2017-10-08T10:01:51.000Z</published>
+    <updated>2018-03-12T01:15:55.149Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="JS 内存 引用传值" scheme="http://yoursite.com/tags/JS-%E5%86%85%E5%AD%98-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS--内存空间</title>
+    <link href="http://yoursite.com/2017/10/08/JS--%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83/"/>
+    <id>http://yoursite.com/2017/10/08/JS--执行环境/</id>
+    <published>2017-10-08T10:01:51.000Z</published>
+    <updated>2018-03-12T07:07:34.712Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/005Xtdi2jw1f9k7b8a6vmj312w0rg143.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005Xtdi2jw1f9k7b8a6vmj312w0rg143.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="JS 内存 引用传值" scheme="http://yoursite.com/tags/JS-%E5%86%85%E5%AD%98-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>Css小知识点总结</title>

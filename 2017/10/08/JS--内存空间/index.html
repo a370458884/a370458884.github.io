@@ -68,10 +68,12 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JS 内存 引用传值," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Be Here Now" type="application/atom+xml" />
@@ -81,17 +83,20 @@
 
 
 
-<meta name="description" content="(1) 不确定高宽情况下，写出正方形1234567&amp;lt;div class=&quot;box&quot;&amp;gt;&amp;lt;/div&amp;gt;.box&amp;#123;    width: 100%;    height: 0;    padding-top: 100%;    background: red;&amp;#125; (2) 字体图标 IconMoon   (3) 1px border 移动端实现   (4) css">
+<meta name="description" content="这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。 因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回事儿？比如浅复制与深复制有什么不同？还有闭包，原型等等。 所以，想要对JS的理解更加深刻，就必须对内存空间有一个清晰的认知。 先来看一个简单">
+<meta name="keywords" content="JS 内存 引用传值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Css小知识点总结">
-<meta property="og:url" content="http://yoursite.com/2017/10/05/Css小知识点总结/index.html">
+<meta property="og:title" content="JS--内存空间">
+<meta property="og:url" content="http://yoursite.com/2017/10/08/JS--内存空间/index.html">
 <meta property="og:site_name" content="Be Here Now">
-<meta property="og:description" content="(1) 不确定高宽情况下，写出正方形1234567&amp;lt;div class=&quot;box&quot;&amp;gt;&amp;lt;/div&amp;gt;.box&amp;#123;    width: 100%;    height: 0;    padding-top: 100%;    background: red;&amp;#125; (2) 字体图标 IconMoon   (3) 1px border 移动端实现   (4) css">
+<meta property="og:description" content="这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。 因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回事儿？比如浅复制与深复制有什么不同？还有闭包，原型等等。 所以，想要对JS的理解更加深刻，就必须对内存空间有一个清晰的认知。 先来看一个简单">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-09T07:27:50.227Z">
+<meta property="og:image" content="http://yoursite.com/_img/ram.png">
+<meta property="og:updated_time" content="2018-03-13T08:13:55.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Css小知识点总结">
-<meta name="twitter:description" content="(1) 不确定高宽情况下，写出正方形1234567&amp;lt;div class=&quot;box&quot;&amp;gt;&amp;lt;/div&amp;gt;.box&amp;#123;    width: 100%;    height: 0;    padding-top: 100%;    background: red;&amp;#125; (2) 字体图标 IconMoon   (3) 1px border 移动端实现   (4) css">
+<meta name="twitter:title" content="JS--内存空间">
+<meta name="twitter:description" content="这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。 因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回事儿？比如浅复制与深复制有什么不同？还有闭包，原型等等。 所以，想要对JS的理解更加深刻，就必须对内存空间有一个清晰的认知。 先来看一个简单">
+<meta name="twitter:image" content="http://yoursite.com/_img/ram.png">
 
 
 
@@ -121,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/05/Css小知识点总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/08/JS--内存空间/"/>
 
 
 
 
 
-  <title>Css小知识点总结 | Be Here Now</title>
+  <title>JS--内存空间 | Be Here Now</title>
   
 
 
@@ -254,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/05/Css小知识点总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/08/JS--内存空间/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zly">
@@ -271,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Css小知识点总结</h1>
+          <h1 class="post-title" itemprop="name headline">JS--内存空间</h1>
         
 
         <div class="post-meta">
@@ -283,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-05T14:05:55+08:00">
-                2017-10-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-08T18:01:51+08:00">
+                2017-10-08
               </time>
             
 
@@ -321,18 +326,21 @@
       
 
       
-        <h2 id="1-不确定高宽情况下，写出正方形"><a href="#1-不确定高宽情况下，写出正方形" class="headerlink" title="(1) 不确定高宽情况下，写出正方形"></a>(1) 不确定高宽情况下，写出正方形</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"box"</span>&gt;&lt;/div&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 0;</span><br><span class="line">    padding-top: 100%;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>(2)
-字体图标 IconMoon
+        <p>这段时间把JS的知识梳理一遍，发现自己以前对内存空间这一块的理解不够透彻。</p>
+<p>因为JavaScript具有自动垃圾回收机制，所以对于前端来说，内存空间并不是一个经常被提及的概念。从而导致对不少知识点的认识都比较模糊，比如最基本的引用数据类型和引用传递到底是怎么回事儿？比如浅复制与深复制有什么不同？还有闭包，原型等等。</p>
+<p>所以，想要对JS的理解更加深刻，就必须对内存空间有一个清晰的认知。</p>
+<p>先来看一个简单的例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123; name: <span class="string">'ll'</span> , age : 18 &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> b(c)&#123;</span><br><span class="line">    c = null</span><br><span class="line">&#125;</span><br><span class="line">b(a);</span><br><span class="line"></span><br><span class="line">console.log(a)</span><br></pre></td></tr></table></figure></p>
+<p>以上例子需要理解JS的基本数据类型、引用数据类型，以及引用传递，这就需要对JS的内存了解的很透彻才行。</p>
+<h1 id="一、栈与堆"><a href="#一、栈与堆" class="headerlink" title="一、栈与堆"></a>一、栈与堆</h1><blockquote>
+<p>其实Javascript没有严格意义上区分栈内存和堆内存。<br>但是在某些场景，我们仍然需要基于堆栈数据结构的思路进行处理，比如JavaScript的执行上下文（执行环境）。执行上下文在逻辑上实现了堆栈。因此理解堆栈数据结构的原理与特点任然十分重要。</p>
+</blockquote>
+<h1 id="二、数据类型"><a href="#二、数据类型" class="headerlink" title="二、数据类型"></a>二、数据类型</h1><pre><code>var a = 20;
+var b = &apos;aaa&apos;;
+var c = true;
+var d = { m: 111 }
+</code></pre><p>在JS中</p>
+<h2 id="变量对象与基础数据类型"><a href="#变量对象与基础数据类型" class="headerlink" title="变量对象与基础数据类型"></a>变量对象与基础数据类型</h2><h2 id="引用数据类型与堆内存"><a href="#引用数据类型与堆内存" class="headerlink" title="引用数据类型与堆内存"></a>引用数据类型与堆内存</h2><h1 id="三、内存空间管理以及内存泄漏"><a href="#三、内存空间管理以及内存泄漏" class="headerlink" title="三、内存空间管理以及内存泄漏"></a>三、内存空间管理以及内存泄漏</h1><p><img src="/_img/ram.png" alt=""></p>
 
-
-(3)
-1px border 移动端实现
-
-
-(4)
-css sticky footers布局
-</code></pre>
       
     </div>
     
@@ -347,6 +355,12 @@ css sticky footers布局
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JS-内存-引用传值/" rel="tag"># JS 内存 引用传值</a>
+          
+        </div>
+      
 
       
       
@@ -356,8 +370,8 @@ css sticky footers布局
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/05/Vue小知识点总结/" rel="next" title="Vue小知识点总结">
-                <i class="fa fa-chevron-left"></i> Vue小知识点总结
+              <a href="/2017/10/08/JS--ES6promise、proxy/" rel="next" title="JS--内存空间">
+                <i class="fa fa-chevron-left"></i> JS--内存空间
               </a>
             
           </div>
@@ -365,10 +379,6 @@ css sticky footers布局
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/08/JS--执行环境/" rel="prev" title="JS--内存空间">
-                JS--内存空间 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +517,7 @@ css sticky footers布局
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-不确定高宽情况下，写出正方形"><span class="nav-number">1.</span> <span class="nav-text">(1) 不确定高宽情况下，写出正方形</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、栈与堆"><span class="nav-number">1.</span> <span class="nav-text">一、栈与堆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、数据类型"><span class="nav-number">2.</span> <span class="nav-text">二、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量对象与基础数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">变量对象与基础数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用数据类型与堆内存"><span class="nav-number">2.2.</span> <span class="nav-text">引用数据类型与堆内存</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、内存空间管理以及内存泄漏"><span class="nav-number">3.</span> <span class="nav-text">三、内存空间管理以及内存泄漏</span></a></li></ol></div>
             
 
           </div>
